@@ -57,4 +57,4 @@ module.exports = {
                 .json({ success: false, status: e.status || 500, code: e.code || 'INTERNAL', message: e.message });
         }
     }
-}
+};
