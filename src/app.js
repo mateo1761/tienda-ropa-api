@@ -6,9 +6,6 @@ const app = express();
 
 app.use(express.json());
 
-// app.use('/api/categories', require('./routes/category.routes'));
-// app.use('/api/products', require('./routes/product.routes'));
-
 app.get('/api/health', (_req, res) => res.json({ status: 'ok', stack: 'express5' }));
 
 app.get('/api/db/health', async (_req, res) => {
@@ -19,6 +16,9 @@ app.get('/api/db/health', async (_req, res) => {
         res.status(500).json({ db: 'error', error: e.message });
     }
 });
+
+app.use('/api/categories', require('./routes/category.routes'));
+app.use('/api/products', require('./routes/product.routes'));
 
 app.use((req, res) => {
     res.status(404).json({ message: 'Not Found' });
