@@ -10,7 +10,7 @@ module.exports = {
         } catch (error) {
             return res
                 .status(error.status || 500)
-                .json({ success: false, status: e.status || 500, code: e.code || 'INTERNAL', message: e.message });
+                .json({ success: false, status: error.status || 500, code: error.code || 'INTERNAL', message: error.message });
         }
     },
 
@@ -21,7 +21,7 @@ module.exports = {
         } catch (error) {
             return res
                 .status(error.status || 500)
-                .json({ success: false, status: e.status || 500, code: e.code || 'INTERNAL', message: e.message });
+                .json({ success: false, status: error.status || 500, code: error.code || 'INTERNAL', message: error.message });
         }
     },
 
@@ -32,7 +32,7 @@ module.exports = {
         } catch (error) {
             return res
                 .status(error.status || 500)
-                .json({ success: false, status: e.status || 500, code: e.code || 'INTERNAL', message: e.message });
+                .json({ success: false, status: error.status || 500, code: error.code || 'INTERNAL', message: error.message });
         }
     },
 
@@ -43,7 +43,7 @@ module.exports = {
         } catch (error) {
             return res
                 .status(error.status || 500)
-                .json({ success: false, status: e.status || 500, code: e.code || 'INTERNAL', message: e.message });
+                .json({ success: false, status: error.status || 500, code: error.code || 'INTERNAL', message: error.message });
         }
     },
 
@@ -54,7 +54,7 @@ module.exports = {
         } catch (error) {
             return res
                 .status(error.status || 500)
-                .json({ success: false, status: e.status || 500, code: e.code || 'INTERNAL', message: e.message });
+                .json({ success: false, status: error.status || 500, code: error.code || 'INTERNAL', message: error.message });
         }
     }
 };

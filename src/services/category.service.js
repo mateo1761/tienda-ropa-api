@@ -49,10 +49,10 @@ module.exports = {
         try {
             return await Category.update(id, { name: name.trim(), description });
         } catch (error) {
-            if (e.code === 'ER_DUP_ENTRY') {
+            if (error.code === 'ER_DUP_ENTRY') {
                 throw boom('La categoría ya existe (name único)', 409, 'DUP_CATEGORY_NAME');
             }
-            throw e;
+            throw error;
         }
     },
 
